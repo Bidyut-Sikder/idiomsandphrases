@@ -1,0 +1,31 @@
+
+
+export const idiomsCategoryData = [
+    { id: 1, title: "Starts With A", category: "Idioms" },
+    { id: 2, title: "Starts With B", category: "Idioms" },
+    { id: 3, title: "Starts With C", category: "Idioms" },
+    { id: 4, title: "Starts With D", category: "Idioms" },
+    { id: 5, title: "Starts With E", category: "Idioms" },
+    { id: 6, title: "Starts With F", category: "Idioms" },
+    { id: 7, title: "Starts With G", category: "Idioms" },
+    { id: 8, title: "Starts With H", category: "Idioms" },
+    { id: 9, title: "Starts With I", category: "Idioms" },
+    { id: 10, title: "Starts With J", category: "Idioms" },
+    { id: 11, title: "Starts With K", category: "Idioms" },
+    { id: 12, title: "Starts With L", category: "Idioms" },
+    { id: 13, title: "Starts With M", category: "Idioms" },
+    { id: 14, title: "Starts With N", category: "Idioms" },
+    { id: 15, title: "Starts With O", category: "Idioms" },
+    { id: 16, title: "Starts With P", category: "Idioms" },
+    { id: 17, title: "Starts With Q", category: "Idioms" },
+    { id: 18, title: "Starts With R", category: "Idioms" },
+    { id: 19, title: "Starts With S", category: "Idioms" },
+    { id: 20, title: "Starts With T", category: "Idioms" },
+    { id: 21, title: "Starts With U", category: "Idioms" },
+    { id: 22, title: "Starts With V", category: "Idioms" },
+    { id: 23, title: "Starts With W", category: "Idioms" },
+    { id: 24, title: "Starts With X", category: "Idioms" },
+    { id: 25, title: "Starts With Y", category: "Idioms" },
+    { id: 26, title: "Starts With Z", category: "Idioms" },
+  ];
+  
