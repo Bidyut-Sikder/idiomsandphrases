@@ -115,33 +115,33 @@ export default function StartsWith({data}:any) {
                   pathname: `/[category]/[title]`,
                   params: { 
                     category, title: 
-                    item.title === "Starts With A" ? 'LikedA' :
-                     item.title === 'Starts With B' ? 'LikedB' :
-                     item.title === 'Starts With C' ? 'LikedC' :
-                     item.title === 'Starts With D' ? 'LikedD' :
-                     item.title === 'Starts With E' ? 'LikedE' :
-                     item.title === 'Starts With F' ? 'LikedF' :
-                     item.title === 'Starts With G' ? 'LikedG' :
-                     item.title === 'Starts With H' ? 'LikedH' :
-                     item.title === 'Starts With I' ? 'LikedI' :
-                     item.title === 'Starts With J' ? 'LikedJ' :
-                     item.title === 'Starts With K' ? 'LikedK' :
-                     item.title === 'Starts With L' ? 'LikedL' :
-                     item.title === 'Starts With M' ? 'LikedM' :
-                     item.title === 'Starts With N' ? 'LikedN' :
-                     item.title === 'Starts With O' ? 'LikedO' :
-                     item.title === 'Starts With P' ? 'LikedP' :
-                     item.title === 'Starts With Q' ? 'LikedQ' :
-                     item.title === 'Starts With R' ? 'LikedR' :
-                     item.title === 'Starts With S' ? 'LikedS' :
-                     item.title === 'Starts With T' ? 'LikedT' :
-                     item.title === 'Starts With U' ? 'LikedU' :
-                     item.title === 'Starts With V' ? 'LikedV' :
-                     item.title === 'Starts With W' ? 'LikedW' :
-                     item.title === 'Starts With X' ? 'LikedX' :
-                     item.title === 'Starts With Y' ? 'LikedY' :
-                     item.title === 'Starts With Z' ? 'LikedZ' :
-                      item.title==='650 IELTS Words'?'liked-ielts-words':""
+                    item.title === "Start With A" ? 'LovedA' :
+                     item.title === 'Start With B' ? 'LovedB' :
+                     item.title === 'Start With C' ? 'LovedC' :
+                     item.title === 'Start With D' ? 'LovedD' :
+                     item.title === 'Start With E' ? 'LovedE' :
+                     item.title === 'Start With F' ? 'LovedF' :
+                     item.title === 'Start With G' ? 'LovedG' :
+                     item.title === 'Start With H' ? 'LovedH' :
+                     item.title === 'Start With I' ? 'LovedI' :
+                     item.title === 'Start With J' ? 'LovedJ' :
+                     item.title === 'Start With K' ? 'LovedK' :
+                     item.title === 'Start With L' ? 'LovedL' :
+                     item.title === 'Start With M' ? 'LovedM' :
+                     item.title === 'Start With N' ? 'LovedN' :
+                     item.title === 'Start With O' ? 'LovedO' :
+                     item.title === 'Start With P' ? 'LovedP' :
+                     item.title === 'Start With Q' ? 'LovedQ' :
+                     item.title === 'Start With R' ? 'LovedR' :
+                     item.title === 'Start With S' ? 'LovedS' :
+                     item.title === 'Start With T' ? 'LovedT' :
+                     item.title === 'Start With U' ? 'LovedU' :
+                     item.title === 'Start With V' ? 'LovedV' :
+                     item.title === 'Start With W' ? 'LovedW' :
+                     item.title === 'Start With X' ? 'LovedX' :
+                     item.title === 'Start With Y' ? 'LovedY' :
+                     item.title === 'Start With Z' ? 'LovedZ' :""
+                      // item.title==='650 IELTS Words'?'Loved-ielts-words':""
                     
                     
                     

@@ -13,11 +13,19 @@ import * as Speech from 'expo-speech';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '@/hooks/theme';
 import { FlashList } from '@shopify/flash-list';
+import { useLocalSearchParams, useNavigation } from 'expo-router';
 
 export default function ShowWords({dataList,storageKey}:any) {
+  const params=useLocalSearchParams()
+ const navigation=useNavigation()
   const [lovedIds, setLovedIds] = useState<number[]>([]);
   const { theme } = useTheme();
   const isDark = theme === 'dark';
+
+  // useEffect(() => {
+  //   navigation.setOptions({ title: decodeURIComponent(`${params.category} ${params.title}`) });
+  // }, [params]);
+
 
   useEffect(() => {
     const loadLovedWords = async () => {
@@ -118,10 +126,10 @@ export default function ShowWords({dataList,storageKey}:any) {
       <View style={styles.header}>
         <Text style={styles.id}>{item.id}.</Text>
         <View style={styles.wordRow}>
-          <Text style={styles.word}>{item.word}</Text>
-          <View style={styles.badge}>
+          <Text style={styles.word}>{item.idiom}</Text>
+          {/* <View style={styles.badge}>
             <Text style={styles.badgeText}>{item.partsOfSpeech}</Text>
-          </View>
+          </View> */}
         </View>
         <View style={styles.iconRow}>
           <TouchableOpacity onPress={() => toggleLove(item.id)}>
@@ -131,7 +139,7 @@ export default function ShowWords({dataList,storageKey}:any) {
               color={lovedIds.includes(item.id) ? 'red' : isDark ? '#aaa' : 'gray'}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => handleSpeak(item.word)} style={{ marginLeft: 10 }}>
+          <TouchableOpacity onPress={() => handleSpeak(item.idiom)} style={{ marginLeft: 10 }}>
             <Ionicons name="volume-high-outline" size={28} color={isDark ? '#fff' : 'black'} />
           </TouchableOpacity>
         </View>
@@ -140,7 +148,8 @@ export default function ShowWords({dataList,storageKey}:any) {
       <Text style={styles.label}>📖 Meaning</Text>
       <Text style={styles.text}>{item.meaning}</Text>
       <Text style={styles.label}>💬 Example</Text>
-      <Text style={styles.textItalic}>{item.example}</Text>
+      <Text style={styles.textItalic}>1. {item.example1}</Text>
+      <Text style={styles.textItalic}>2. {item.example2}</Text>
     </View>
   );
 
