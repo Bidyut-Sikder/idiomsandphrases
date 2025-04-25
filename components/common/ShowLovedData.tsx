@@ -17,7 +17,7 @@ import { useTheme } from "@/hooks/theme";
 export default function ShowLikedWords({dataList,header, storageKey}:any) {
 
   const [lovedIds, setLovedIds] = useState<number[]>([]);
-  const navigation = useNavigation();
+
   const [loading, setLoading] = useState(false);
 
   const params = useLocalSearchParams();
@@ -42,9 +42,6 @@ export default function ShowLikedWords({dataList,header, storageKey}:any) {
     loadLovedWords();
   }, []);
 
-  useEffect(() => {
-    navigation.setOptions({ title: decodeURIComponent(`❤️ ${params.category} ${header}`) });
-  }, [params]);
 
   const handleSpeak = (text: string) => {
     Speech.speak(text, { language: "en", rate: 0.8 });
@@ -64,7 +61,7 @@ export default function ShowLikedWords({dataList,header, storageKey}:any) {
       <View style={styles.header}>
         <Text style={styles.id}>{item.id}.</Text>
         <View style={styles.wordRow}>
-          <Text style={styles.word}>{item.idiom}</Text>
+          <Text style={styles.word}>{item.idiom|| item.phrase}</Text>
           {/* <View style={styles.badge}>
             <Text style={styles.badgeText}>{item.partsOfSpeech}</Text>
           </View> */}
@@ -74,7 +71,7 @@ export default function ShowLikedWords({dataList,header, storageKey}:any) {
             <Ionicons name="heart" size={26} color="red" />
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => handleSpeak(item.word)}
+            onPress={() => handleSpeak(item.idiom|| item.phrase)}
             style={{ marginLeft: 10 }}
           >
             <Ionicons

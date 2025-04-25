@@ -16,29 +16,9 @@ import { useTheme } from "@/hooks/theme";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { idiomsCategoryData } from "@/assets/data/idioms/idiomsCategory";
-const dataff: {
-  id: number;
-  title: string;
 
-}[] = [
-  {
-    id: 1,
-    title: "500 Daily/GRE Words",
- 
-  },
-  {
-    id: 2,
-    title: "450 Common Words",
 
-  },
-  {
-    id: 3,
-    title: "650 IELTS Words",
-   
-  },
-];
-
-export default function StartsWith({data}:any) {
+export default function IdiomsCategories({data}:any) {
   // const [lovedIds, setLovedIds] = useState<number[]>([]);
   // useEffect(() => {
 
@@ -114,33 +94,33 @@ export default function StartsWith({data}:any) {
                 router.push({
                   pathname: `/[category]/[title]`,
                   params: { 
-                    category, title: 
-                    item.title === "Start With A" ? 'LovedA' :
-                     item.title === 'Start With B' ? 'LovedB' :
-                     item.title === 'Start With C' ? 'LovedC' :
-                     item.title === 'Start With D' ? 'LovedD' :
-                     item.title === 'Start With E' ? 'LovedE' :
-                     item.title === 'Start With F' ? 'LovedF' :
-                     item.title === 'Start With G' ? 'LovedG' :
-                     item.title === 'Start With H' ? 'LovedH' :
-                     item.title === 'Start With I' ? 'LovedI' :
-                     item.title === 'Start With J' ? 'LovedJ' :
-                     item.title === 'Start With K' ? 'LovedK' :
-                     item.title === 'Start With L' ? 'LovedL' :
-                     item.title === 'Start With M' ? 'LovedM' :
-                     item.title === 'Start With N' ? 'LovedN' :
-                     item.title === 'Start With O' ? 'LovedO' :
-                     item.title === 'Start With P' ? 'LovedP' :
-                     item.title === 'Start With Q' ? 'LovedQ' :
-                     item.title === 'Start With R' ? 'LovedR' :
-                     item.title === 'Start With S' ? 'LovedS' :
-                     item.title === 'Start With T' ? 'LovedT' :
-                     item.title === 'Start With U' ? 'LovedU' :
-                     item.title === 'Start With V' ? 'LovedV' :
-                     item.title === 'Start With W' ? 'LovedW' :
-                     item.title === 'Start With X' ? 'LovedX' :
-                     item.title === 'Start With Y' ? 'LovedY' :
-                     item.title === 'Start With Z' ? 'LovedZ' :""
+                    category, title: category==='Idioms'&&
+                    item.title === "Idioms Start With A" ? '❤️ A Idioms' :
+                     item.title === 'Idioms Start With B' ? '❤️ B Idioms' :
+                     item.title === 'Idioms Start With C' ? '❤️ C Idioms' :
+                     item.title === 'Idioms Start With D' ? '❤️ D Idioms' :
+                     item.title === 'Idioms Start With E' ? '❤️ E Idioms' :
+                     item.title === 'Idioms Start With F' ? '❤️ F Idioms' :
+                     item.title === 'Idioms Start With G' ? '❤️ G Idioms' :
+                     item.title === 'Idioms Start With H' ? '❤️ H Idioms' :
+                     item.title === 'Idioms Start With I' ? '❤️ I Idioms' :
+                     item.title === 'Idioms Start With J' ? '❤️ J Idioms' :
+                     item.title === 'Idioms Start With K' ? '❤️ K Idioms' :
+                     item.title === 'Idioms Start With L' ? '❤️ L Idioms' :
+                     item.title === 'Idioms Start With M' ? '❤️ M Idioms' :
+                     item.title === 'Idioms Start With N' ? '❤️ N Idioms' :
+                     item.title === 'Idioms Start With O' ? '❤️ O Idioms' :
+                     item.title === 'Idioms Start With P' ? '❤️ P Idioms' :
+                     item.title === 'Idioms Start With Q' ? '❤️ Q Idioms' :
+                     item.title === 'Idioms Start With R' ? '❤️ R Idioms' :
+                     item.title === 'Idioms Start With S' ? '❤️ S Idioms' :
+                     item.title === 'Idioms Start With T' ? '❤️ T Idioms' :
+                     item.title === 'Idioms Start With U' ? '❤️ U Idioms' :
+                     item.title === 'Idioms Start With V' ? '❤️ V Idioms' :
+                     item.title === 'Idioms Start With W' ? '❤️ W Idioms' :
+                     item.title === 'Idioms Start With X' ? '❤️ X Idioms' :
+                     item.title === 'Idioms Start With Y' ? '❤️ Y Idioms' :
+                     item.title === 'Idioms Start With Z' ? '❤️ Z Idioms' :""
                       // item.title==='650 IELTS Words'?'Loved-ielts-words':""
                     
                     

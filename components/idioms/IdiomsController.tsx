@@ -43,85 +43,85 @@ const IdiomsController = () => {
   }, [title]);
 
   switch (title) {
-    case "Start With A":
-      return <ShowData dataList={idiomsStartWithA} storageKey="lovedA" />;
-    case "Start With B":
-      return <ShowData dataList={idiomsStartWithB} storageKey="lovedB" />;
-    case "Start With C":
-      return <ShowData dataList={idiomsStartWithC} storageKey="lovedC" />;
+    case "Idioms Start With A":
+      return <ShowData dataList={idiomsStartWithA} storageKey="lovedIdiomsA" />;
+    case "Idioms Start With B":
+      return <ShowData dataList={idiomsStartWithB} storageKey="lovedIdiomsB" />;
+    case "Idioms Start With C":
+      return <ShowData dataList={idiomsStartWithC} storageKey="lovedIdiomsC" />;
 
-    case "Start With D":
-      return <ShowData dataList={idiomsStartWithD} storageKey="lovedD" />;
-    case "Start With E":
-      return <ShowData dataList={idiomsStartWithE} storageKey="lovedE" />;
-    case "Start With F":
-      return <ShowData dataList={idiomsStartWithF} storageKey="lovedF" />;
-    case "Start With G":
-      return <ShowData dataList={idiomsStartWithG} storageKey="lovedG" />;
+    case "Idioms Start With D":
+      return <ShowData dataList={idiomsStartWithD} storageKey="lovedIdiomsD" />;
+    case "Idioms Start With E":
+      return <ShowData dataList={idiomsStartWithE} storageKey="lovedIdiomsE" />;
+    case "Idioms Start With F":
+      return <ShowData dataList={idiomsStartWithF} storageKey="lovedIdiomsF" />;
+    case "Idioms Start With G":
+      return <ShowData dataList={idiomsStartWithG} storageKey="lovedIdiomsG" />;
 
-    case "Start With H":
-      return <ShowData dataList={idiomsStartWithH} storageKey="lovedH" />;
-    case "Start With I":
-      return <ShowData dataList={idiomsStartWithI} storageKey="lovedI" />;
-    case "Start With J":
-      return <ShowData dataList={idiomsStartWithJ} storageKey="lovedJ" />;
-    case "Start With K":
-      return <ShowData dataList={idiomsStartWithK} storageKey="lovedK" />;
-    case "Start With L":
-      return <ShowData dataList={idiomsStartWithL} storageKey="lovedL" />;
-    case "Start With M":
-      return <ShowData dataList={idiomsStartWithM} storageKey="lovedM" />;
-    case "Start With N":
-      return <ShowData dataList={idiomsStartWithN} storageKey="lovedN" />;
-    case "Start With O":
-      return <ShowData dataList={idiomsStartWithO} storageKey="lovedO" />;
-    case "Start With P":
-      return <ShowData dataList={idiomsStartWithP} storageKey="lovedP" />;
-    case "Start With Q":
-      return <ShowData dataList={idiomsStartWithQ} storageKey="lovedQ" />;
-    case "Start With R":
-      return <ShowData dataList={idiomsStartWithR} storageKey="lovedR" />;
-    case "Start With S":
-      return <ShowData dataList={idiomsStartWithS} storageKey="lovedS" />;
-    case "Start With T":
-      return <ShowData dataList={idiomsStartWithT} storageKey="lovedT" />;
-    case "Start With U":
-      return <ShowData dataList={idiomsStartWithU} storageKey="lovedU" />;
-    case "Start With V":
-      return <ShowData dataList={idiomsStartWithV} storageKey="lovedV" />;
-    case "Start With W":
-      return <ShowData dataList={idiomsStartWithW} storageKey="lovedW" />;
-    case "Start With X":
-      return <ShowData dataList={idiomsStartWithX} storageKey="lovedX" />;
-    case "Start With Y":
-      return <ShowData dataList={idiomsStartWithY} storageKey="lovedY" />;
-    case "Start With Z":
-      return <ShowData dataList={idiomsStartWithZ} storageKey="lovedZ" />;
-    case "LovedA":
+    case "Idioms Start With H":
+      return <ShowData dataList={idiomsStartWithH} storageKey="lovedIdiomsH" />;
+    case "Idioms Start With I":
+      return <ShowData dataList={idiomsStartWithI} storageKey="lovedIdiomsI" />;
+    case "Idioms Start With J":
+      return <ShowData dataList={idiomsStartWithJ} storageKey="lovedIdiomsJ" />;
+    case "Idioms Start With K":
+      return <ShowData dataList={idiomsStartWithK} storageKey="lovedIdiomsK" />;
+    case "Idioms Start With L":
+      return <ShowData dataList={idiomsStartWithL} storageKey="lovedIdiomsL" />;
+    case "Idioms Start With M":
+      return <ShowData dataList={idiomsStartWithM} storageKey="lovedIdiomsM" />;
+    case "Idioms Start With N":
+      return <ShowData dataList={idiomsStartWithN} storageKey="lovedIdiomsN" />;
+    case "Idioms Start With O":
+      return <ShowData dataList={idiomsStartWithO} storageKey="lovedIdiomsO" />;
+    case "Idioms Start With P":
+      return <ShowData dataList={idiomsStartWithP} storageKey="lovedIdiomsP" />;
+    case "Idioms Start With Q":
+      return <ShowData dataList={idiomsStartWithQ} storageKey="lovedIdiomsQ" />;
+    case "Idioms Start With R":
+      return <ShowData dataList={idiomsStartWithR} storageKey="lovedIdiomsR" />;
+    case "Idioms Start With S":
+      return <ShowData dataList={idiomsStartWithS} storageKey="lovedIdiomsS" />;
+    case "Idioms Start With T":
+      return <ShowData dataList={idiomsStartWithT} storageKey="lovedIdiomsT" />;
+    case "Idioms Start With U":
+      return <ShowData dataList={idiomsStartWithU} storageKey="lovedIdiomsU" />;
+    case "Idioms Start With V":
+      return <ShowData dataList={idiomsStartWithV} storageKey="lovedIdiomsV" />;
+    case "Idioms Start With W":
+      return <ShowData dataList={idiomsStartWithW} storageKey="lovedIdiomsW" />;
+    case "Idioms Start With X":
+      return <ShowData dataList={idiomsStartWithX} storageKey="lovedIdiomsX" />;
+    case "Idioms Start With Y":
+      return <ShowData dataList={idiomsStartWithY} storageKey="lovedIdiomsY" />;
+    case "Idioms Start With Z":
+      return <ShowData dataList={idiomsStartWithZ} storageKey="lovedIdiomsZ" />;
+    case "❤️ A Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithA}
           header="Start With A"
-          storageKey="lovedA"
+          storageKey="lovedIdiomsA"
         />
       );
-    case "LovedB":
+    case "❤️ B Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithB}
           header="Start With B"
-          storageKey="lovedB"
+          storageKey="lovedIdiomsB"
         />
       );
-    case "LovedC":
+    case "❤️ C Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithC}
           header="Start With C"
-          storageKey="lovedC"
+          storageKey="lovedIdiomsC"
         />
       );
-    case "LovedD":
+    case "❤️ D Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithD}
@@ -129,7 +129,7 @@ const IdiomsController = () => {
           storageKey="lovedD"
         />
       );
-    case "LovedE":
+    case "❤️ E Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithE}
@@ -137,172 +137,172 @@ const IdiomsController = () => {
           storageKey="lovedE"
         />
       );
-    case "LovedF":
+    case "❤️ F Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithF}
           header="Start With F"
-          storageKey="lovedF"
+          storageKey="lovedIdiomsF"
         />
       );
-    case "LovedG":
+    case "❤️ G Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithG}
           header="Start With G"
-          storageKey="lovedG"
+          storageKey="lovedIdiomsG"
         />
       );
-    case "LovedH":
+    case "❤️ H Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithH}
           header="Start With H"
-          storageKey="lovedH"
+          storageKey="lovedIdiomsH"
         />
       );
-    case "LovedI":
+    case "❤️ I Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithI}
           header="Start With I"
-          storageKey="lovedI"
+          storageKey="lovedIdiomsI"
         />
       );
-    case "LovedJ":
+    case "❤️ J Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithJ}
           header="Start With J"
-          storageKey="lovedJ"
+          storageKey="lovedIdiomsJ"
         />
       );
-    case "LovedK":
+    case "❤️ K Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithK}
           header="Start With K"
-          storageKey="lovedK"
+          storageKey="lovedIdiomsK"
         />
       );
-    case "LovedL":
+    case "❤️ L Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithL}
           header="Start With L"
-          storageKey="lovedL"
+          storageKey="lovedIdiomsL"
         />
       );
-    case "LovedM":
+    case "❤️ M Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithM}
           header="Start With M"
-          storageKey="lovedM"
+          storageKey="lovedIdiomsM"
         />
       );
-    case "LovedN":
+    case "❤️ N Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithN}
           header="Start With N"
-          storageKey="lovedN"
+          storageKey="lovedIdiomsN"
         />
       );
-    case "LovedO":
+    case "❤️ O Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithO}
           header="Start With O"
-          storageKey="lovedO"
+          storageKey="lovedIdiomsO"
         />
       );
-    case "LovedP":
+    case "❤️ P Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithP}
           header="Start With P"
-          storageKey="lovedP"
+          storageKey="lovedIdiomsP"
         />
       );
-    case "LovedQ":
+    case "❤️ Q Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithQ}
           header="Start With Q"
-          storageKey="lovedQ"
+          storageKey="lovedIdiomsQ"
         />
       );
-    case "LovedR":
+    case "❤️ R Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithR}
           header="Start With R"
-          storageKey="lovedR"
+          storageKey="lovedIdiomsR"
         />
       );
-    case "LovedS":
+    case "❤️ S Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithS}
           header="Start With S"
-          storageKey="lovedS"
+          storageKey="lovedIdiomsS"
         />
       );
-    case "LovedT":
+    case "❤️ T Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithT}
           header="Start With T"
-          storageKey="lovedT"
+          storageKey="lovedIdiomsT"
         />
       );
-    case "LovedU":
+    case "❤️ U Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithU}
           header="Start With U"
-          storageKey="lovedU"
+          storageKey="lovedIdiomsU"
         />
       );
-    case "LovedV":
+    case "❤️ V Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithV}
           header="Start With V"
-          storageKey="lovedV"
+          storageKey="lovedIdiomsV"
         />
       );
-    case "LovedW":
+    case "❤️ W Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithW}
           header="Start With W"
-          storageKey="lovedW"
+          storageKey="lovedIdiomsW"
         />
       );
-    case "LovedX":
+    case "❤️ X Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithX}
           header="Start With X"
-          storageKey="lovedX"
+          storageKey="lovedIdiomsX"
         />
       );
-    case "LovedY":
+    case "❤️ Y Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithY}
           header="Start With Y"
-          storageKey="lovedY"
+          storageKey="lovedIdiomsY"
         />
       );
-    case "LovedZ":
+    case "❤️ Z Idioms":
       return (
         <ShowLovedData
           dataList={idiomsStartWithZ}
           header="Start With Z"
-          storageKey="lovedZ"
+          storageKey="lovedIdiomsZ"
         />
       );
     default:
