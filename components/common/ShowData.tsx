@@ -139,7 +139,7 @@ export default function ShowData({dataList,storageKey}:any) {
               color={lovedIds.includes(item.id) ? 'red' : isDark ? '#aaa' : 'gray'}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => handleSpeak(item.idiom||item.phrase)} style={{ marginLeft: 10 }}>
+          <TouchableOpacity onPress={() => handleSpeak(item.idiom||item.phrase||item.proverb)} style={{ marginLeft: 10 }}>
             <Ionicons name="volume-high-outline" size={28} color={isDark ? '#fff' : 'black'} />
           </TouchableOpacity>
         </View>

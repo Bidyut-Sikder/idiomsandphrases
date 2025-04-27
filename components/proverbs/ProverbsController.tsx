@@ -16,7 +16,7 @@ const IdiomsController = () => {
       navigation.setOptions({ title: decodeURIComponent(title as string) });
     }
   }, [title]);
-  console.log( category, title )
+ 
   switch (title) {
   
     case "Proverbs Start With A":

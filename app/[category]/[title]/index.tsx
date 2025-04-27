@@ -1,6 +1,7 @@
 import IdiomsController from "@/components/idioms/IdiomsController";
 import PhrasesController from "@/components/phrases/PhrasesController";
 import ProverbsController from "@/components/proverbs/ProverbsController";
+import WordsController from "@/components/words/WordsController";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
@@ -20,7 +21,9 @@ if(category==='Phrases'&& title){
 if(category==='Proverbs'&& title){
     return <ProverbsController />
 }
-
+if(category==='Words'&& title){
+  return <WordsController />
+}
 
   return (
     <View>
