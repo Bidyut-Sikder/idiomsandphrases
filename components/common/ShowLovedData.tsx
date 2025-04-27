@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import {
   View,
@@ -12,36 +11,25 @@ import * as Speech from "expo-speech";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useNavigation } from "expo-router";
 import { useTheme } from "@/hooks/theme";
+import NoDataFound from "./NoDataFound";
 
-
-export default function ShowLikedWords({dataList,header, storageKey}:any) {
-
+export default function ShowLikedWords({ dataList, header, storageKey }: any) {
   const [lovedIds, setLovedIds] = useState<number[]>([]);
 
   const [loading, setLoading] = useState(false);
-
-  const params = useLocalSearchParams();
-  console.log(params,'data')
 
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
   useEffect(() => {
     const loadLovedWords = async () => {
-      try {
-        setLoading(true);
-        const json = await AsyncStorage.getItem(storageKey);
-        if (json) {
-          setLovedIds(JSON.parse(json));
-          setLoading(false);
-        }
-      } catch (error) {
-        setLoading(false);
+      const json = await AsyncStorage.getItem(storageKey);
+      if (json) {
+        setLovedIds(JSON.parse(json));
       }
     };
     loadLovedWords();
   }, []);
-
 
   const handleSpeak = (text: string) => {
     Speech.speak(text, { language: "en", rate: 0.8 });
@@ -53,15 +41,14 @@ export default function ShowLikedWords({dataList,header, storageKey}:any) {
     await AsyncStorage.setItem(storageKey, JSON.stringify(updated));
   };
 
-
-  const likedWords = dataList.filter((word:any) => lovedIds.includes(word.id));
+  const likedWords = dataList.filter((word: any) => lovedIds.includes(word.id));
 
   const renderItem = ({ item }: { item: (typeof dataList)[0] }) => (
     <View style={styles.card}>
       <View style={styles.header}>
         <Text style={styles.id}>{item.id}.</Text>
         <View style={styles.wordRow}>
-          <Text style={styles.word}>{item.idiom|| item.phrase}</Text>
+          <Text style={styles.word}>{item.idiom || item.phrase}</Text>
           {/* <View style={styles.badge}>
             <Text style={styles.badgeText}>{item.partsOfSpeech}</Text>
           </View> */}
@@ -71,7 +58,7 @@ export default function ShowLikedWords({dataList,header, storageKey}:any) {
             <Ionicons name="heart" size={26} color="red" />
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => handleSpeak(item.idiom|| item.phrase)}
+            onPress={() => handleSpeak(item.idiom || item.phrase)}
             style={{ marginLeft: 10 }}
           >
             <Ionicons
@@ -161,27 +148,13 @@ export default function ShowLikedWords({dataList,header, storageKey}:any) {
 
   return (
     <View style={{ flex: 1, backgroundColor: isDark ? "#191919" : "#f2f2f2" }}>
-       <FlatList
+      <FlatList
         data={likedWords}
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderItem}
         contentContainerStyle={styles.list}
-        ListEmptyComponent={
-          <Text
-            style={{
-              textAlign: "center",
-              marginTop: 50,
-              color: isDark ? "#aaa" : "#333",
-            }}
-          >
-            {
-              loading
-                ? "Loading..."
-                : "No liked words found. Go to the dictionary and like some words!"
-            }
-          </Text>
-        }
-      /> 
+        ListEmptyComponent={<NoDataFound />}
+      />
     </View>
   );
 }

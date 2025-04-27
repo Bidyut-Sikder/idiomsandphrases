@@ -1,9 +1,10 @@
 import { idiomsCategoryData } from "@/assets/data/idioms/idiomsCategory";
 import { phrasesCategoryData } from "@/assets/data/phrases/phrasesCategory";
-import { proverbsCategoryData } from "@/assets/data/proverbs/proverbsCategory";
+import { proverbCategoryData } from "@/assets/data/proverbs/proverbCategories";
 import IdiomsCategories from "@/components/idioms/IdiomsCategories";
 
 import PhrasesCategories from "@/components/phrases/PhrasesCategories";
+import ProverbCategories from "@/components/proverbs/ProverbCategories";
 
 import { useLocalSearchParams, useNavigation } from "expo-router";
 import React, { useEffect } from "react";
@@ -27,7 +28,7 @@ const Index = () => {
     return <PhrasesCategories data={phrasesCategoryData} />;
   }
   if (category === "Proverbs") {
-    return <PhrasesCategories data={proverbsCategoryData} />;
+    return <ProverbCategories data={proverbCategoryData} />;
   }
   if (category === "Words") {
     return <Text>Words</Text>;

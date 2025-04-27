@@ -15,7 +15,7 @@ import { useTheme } from '@/hooks/theme';
 import { FlashList } from '@shopify/flash-list';
 import { useLocalSearchParams, useNavigation } from 'expo-router';
 
-export default function ShowWords({dataList,storageKey}:any) {
+export default function ShowData({dataList,storageKey}:any) {
   const params=useLocalSearchParams()
  const navigation=useNavigation()
   const [lovedIds, setLovedIds] = useState<number[]>([]);
@@ -126,7 +126,7 @@ export default function ShowWords({dataList,storageKey}:any) {
       <View style={styles.header}>
         <Text style={styles.id}>{item.id}.</Text>
         <View style={styles.wordRow}>
-          <Text style={styles.word}>{item.idiom || item.phrase}</Text>
+          <Text style={styles.word}>{item.idiom || item.phrase||item.proverb}</Text>
           {/* <View style={styles.badge}>
             <Text style={styles.badgeText}>{item.partsOfSpeech}</Text>
           </View> */}
