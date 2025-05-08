@@ -1,6 +1,7 @@
 import IdiomsController from "@/components/idioms/IdiomsController";
 import PhrasesController from "@/components/phrases/PhrasesController";
 import ProverbsController from "@/components/proverbs/ProverbsController";
+import SlangsController from "@/components/slangs/SlangsController";
 import WordsController from "@/components/words/WordsController";
 import { useLocalSearchParams } from "expo-router";
 import React from "react";
@@ -24,6 +25,12 @@ if(category==='Proverbs'&& title){
 if(category==='Words'&& title){
   return <WordsController />
 }
+
+
+if(category==='Slangs'&& title){
+  return <SlangsController />
+}
+
 
   return (
     <View>

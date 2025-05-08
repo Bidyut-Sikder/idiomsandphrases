@@ -48,7 +48,7 @@ export default function ShowLikedWords({ dataList, header, storageKey }: any) {
       <View style={styles.header}>
         <Text style={styles.id}>{item.id}.</Text>
         <View style={styles.wordRow}>
-          <Text style={styles.word}>{item.idiom || item.phrase||item.proverb}</Text>
+          <Text style={styles.word}>{item.idiom ||item.slang || item.phrase||item.proverb}</Text>
           {/* <View style={styles.badge}>
             <Text style={styles.badgeText}>{item.partsOfSpeech}</Text>
           </View> */}
@@ -58,7 +58,7 @@ export default function ShowLikedWords({ dataList, header, storageKey }: any) {
             <Ionicons name="heart" size={26} color="red" />
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => handleSpeak(item.idiom || item.phrase ||item.proverb)}
+            onPress={() => handleSpeak(item.idiom ||item.slang|| item.phrase ||item.proverb)}
             style={{ marginLeft: 10 }}
           >
             <Ionicons

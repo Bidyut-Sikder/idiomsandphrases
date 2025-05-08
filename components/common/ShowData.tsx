@@ -126,7 +126,7 @@ export default function ShowData({dataList,storageKey}:any) {
       <View style={styles.header}>
         <Text style={styles.id}>{item.id}.</Text>
         <View style={styles.wordRow}>
-          <Text style={styles.word}>{item.idiom || item.phrase||item.proverb}</Text>
+          <Text style={styles.word}>{item.idiom || item.phrase||item.proverb||item.slang}</Text>
           {/* <View style={styles.badge}>
             <Text style={styles.badgeText}>{item.partsOfSpeech}</Text>
           </View> */}
@@ -139,7 +139,7 @@ export default function ShowData({dataList,storageKey}:any) {
               color={lovedIds.includes(item.id) ? 'red' : isDark ? '#aaa' : 'gray'}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => handleSpeak(item.idiom||item.phrase||item.proverb)} style={{ marginLeft: 10 }}>
+          <TouchableOpacity onPress={() => handleSpeak(item.idiom ||item.slang||item.phrase||item.proverb)} style={{ marginLeft: 10 }}>
             <Ionicons name="volume-high-outline" size={28} color={isDark ? '#fff' : 'black'} />
           </TouchableOpacity>
         </View>

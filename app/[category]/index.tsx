@@ -1,11 +1,13 @@
 import { idiomsCategoryData } from "@/assets/data/idioms/idiomsCategory";
 import { phrasesCategoryData } from "@/assets/data/phrases/phrasesCategory";
 import { proverbCategoryData } from "@/assets/data/proverbs/proverbCategories";
+import { slangsCategoryData } from "@/assets/data/slangs/slangCagories";
 import { wordsCategories } from "@/assets/data/words/categories";
 import IdiomsCategories from "@/components/idioms/IdiomsCategories";
 
 import PhrasesCategories from "@/components/phrases/PhrasesCategories";
 import ProverbCategories from "@/components/proverbs/ProverbCategories";
+import SlangsCategories from "@/components/slangs/SlangsCategories";
 import WordsCategories from "@/components/words/WordsCategories";
 
 import { useLocalSearchParams, useNavigation } from "expo-router";
@@ -37,7 +39,7 @@ const Index = () => {
   }
 
   if (category === "Slangs") {
-    return <Text>Words</Text>;
+    return <SlangsCategories data={slangsCategoryData} />
   }
 
   if (category === "Beginner") {
