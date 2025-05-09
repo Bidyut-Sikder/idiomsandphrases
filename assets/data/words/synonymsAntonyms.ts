@@ -1,4 +1,4 @@
-export const synonymAntonymstartsWithA = [
+export const wordsStartWithA = [
   {
     id: 1,
     word: "Abandon",
@@ -541,7 +541,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
 
-  export const synonymAntonymstartsWithB = [
+  export const wordsStartWithB = [
     {
       id: 1,
       word: "Benevolent",
@@ -973,7 +973,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
 
-  export const synonymAntonymstartsWithC = [
+  export const wordsStartWithC = [
     {
       id: 1,
       word: "Candid",
@@ -1677,7 +1677,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
 
-  export const synonymAntonymstartsWithD = [
+  export const wordsStartWithD = [
     {
       id: 1,
       word: "Diligent",
@@ -2304,7 +2304,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
 
-  export const synonymAntonymstartsWithE = [
+  export const wordsStartWithE = [
     {
       id: 1,
       word: "Eager",
@@ -2860,7 +2860,7 @@ export const synonymAntonymstartsWithA = [
     },
   ];
   
-  export const synonymAntonymstartsWithF = [
+  export const wordsStartWithF = [
     {
       id: 1,
       word: "Fabulous",
@@ -3251,7 +3251,7 @@ export const synonymAntonymstartsWithA = [
 
   ];
   
-  export const synonymAntonymstartsWithG = [
+  export const wordsStartWithG = [
     {
       id: 1,
       word: "Gain",
@@ -3881,7 +3881,7 @@ export const synonymAntonymstartsWithA = [
   
 
 
-  export const synonymAntonymstartsWithH = [
+  export const wordsStartWithH = [
     {
       id: 1,
       word: "Happy",
@@ -4346,7 +4346,7 @@ export const synonymAntonymstartsWithA = [
     },
   ];
   
-  export const synonymAntonymstartsWithI = [
+  export const wordsStartWithI = [
     {
       id: 1,
       word: "Ideal",
@@ -4889,7 +4889,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
 
-  export const synonymAntonymstartsWithJ = [
+  export const wordsStartWithJ = [
     {
       id: 1,
       word: "Jolly",
@@ -5433,7 +5433,7 @@ export const synonymAntonymstartsWithA = [
   
   ]
 
-  export const synonymAntonymstartsWithK = [
+  export const wordsStartWithK = [
     {
       id: 1,
       word: "Keen",
@@ -5858,7 +5858,7 @@ export const synonymAntonymstartsWithA = [
 
 
 
-  export const synonymAntonymstartsWithL = [
+  export const wordsStartWithL = [
     {
       id: 1,
       word: "Lack",
@@ -6325,7 +6325,7 @@ export const synonymAntonymstartsWithA = [
   
 
 
-  export const synonymAntonymstartsWithM = [
+  export const wordsStartWithM = [
     {
       id: 1,
       word: "Magnificent",
@@ -6875,7 +6875,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
 
-  export const synonymAntonymstartsWithN = [
+  export const wordsStartWithN = [
     {
       id: 1,
       word: "Narrow",
@@ -7439,7 +7439,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
 
-  export const synonymAntonymstartsWithO = [
+  export const wordsStartWithO = [
     {
       id: 1,
       word: "Obvious",
@@ -7976,7 +7976,7 @@ export const synonymAntonymstartsWithA = [
   
 
 
-  export const synonymAntonymstartsWithP = [
+  export const wordsStartWithP = [
     {
       id: 1,
       word: "Panic",
@@ -8532,7 +8532,7 @@ export const synonymAntonymstartsWithA = [
     },
   ];
   
-  export const synonymAntonymstartsWithQ = [
+  export const wordsStartWithQ = [
     {
       id: 1,
       word: "Quaint",
@@ -9075,7 +9075,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
   
-  export const synonymAntonymstartsWithR = [
+  export const wordsStartWithR = [
     {
       id: 1,
       word: "Radical",
@@ -9648,7 +9648,7 @@ export const synonymAntonymstartsWithA = [
   
 
 
-  export const synonymAntonymstartsWithS = [
+  export const wordsStartWithS = [
     {
       id: 1,
       word: "Sacrifice",
@@ -10191,7 +10191,7 @@ export const synonymAntonymstartsWithA = [
   ]
 
 
-  export const synonymAntonymstartsWithT = [
+  export const wordsStartWithT = [
     {
       id: 1,
       word: "Tangible",
@@ -10768,7 +10768,7 @@ export const synonymAntonymstartsWithA = [
     },
   ];
   
-  export const synonymAntonymstartsWithU = [
+  export const wordsStartWithU = [
     {
       id: 1,
       word: "Ubiquitous",
@@ -11234,7 +11234,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
 
-  export const synonymAntonymstartsWithV = [
+  export const wordsStartWithV = [
     {
       id: 1,
       word: "Vagabond",
@@ -11707,7 +11707,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
 
-  export const synonymAntonymstartsWithW = [
+  export const wordsStartWithW = [
     {
       id: 1,
       word: "Wander",
@@ -12251,7 +12251,7 @@ export const synonymAntonymstartsWithA = [
   
   ]
 
-  export const synonymAntonymstartsWithX = [
+  export const wordsStartWithX = [
     {
       id: 1,
       word: "Xenophobia",
@@ -12718,7 +12718,7 @@ export const synonymAntonymstartsWithA = [
   ];
   
 
-  export const synonymAntonymstartsWithY = [
+  export const wordsStartWithY = [
     {
       id: 1,
       word: "Yacht",
@@ -13263,7 +13263,7 @@ export const synonymAntonymstartsWithA = [
   
 
 
-  export const synonymAntonymstartsWithZ = [
+  export const wordsStartWithZ = [
     {
       id: 1,
       word: "Zebra",

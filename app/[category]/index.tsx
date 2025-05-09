@@ -1,8 +1,10 @@
+import { AdvancedCategoryData, BeginerCategoryData } from "@/assets/data/expressions/categories";
 import { idiomsCategoryData } from "@/assets/data/idioms/idiomsCategory";
 import { phrasesCategoryData } from "@/assets/data/phrases/phrasesCategory";
 import { proverbCategoryData } from "@/assets/data/proverbs/proverbCategories";
 import { slangsCategoryData } from "@/assets/data/slangs/slangCagories";
 import { wordsCategories } from "@/assets/data/words/categories";
+import BeginerCategories from "@/components/expressions/BeginerCategories";
 import IdiomsCategories from "@/components/idioms/IdiomsCategories";
 
 import PhrasesCategories from "@/components/phrases/PhrasesCategories";
@@ -43,18 +45,16 @@ const Index = () => {
   }
 
   if (category === "Beginner") {
-    return <Text>Beginner</Text>;
-  }
-  if (category === "Intermediate") {
-    return <Text>Intermediate</Text>;
-  }
-  if (category === "Words") {
-    return <Text>Words</Text>;
-  }
-  if (category === "Advanced") {
-    return <Text>Advanced</Text>;
+    return <BeginerCategories data={BeginerCategoryData} />;
   }
 
+
+  if (category === "Advanced") {
+    return <BeginerCategories data={AdvancedCategoryData} />;
+  }
+  if (category === "Practice") {
+    return <Text>Practice</Text>;
+  }
   return (
     <View>
       <Text>No Data Found!</Text>

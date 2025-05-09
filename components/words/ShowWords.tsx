@@ -11,27 +11,39 @@ import * as Speech from "expo-speech";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "@/hooks/theme";
 import { FlashList } from "@shopify/flash-list";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function ShowWords({ dataList }: any) {
-
- 
-
+export default function ShowWords({ dataList, storageKey }: any) {
   const [lovedIds, setLovedIds] = useState<number[]>([]);
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
-  // Handle speech start and stop functionality
   const handleSpeak = (text: string) => {
-    Speech.stop(); // Stop any ongoing speech
-    Speech.speak(text, { language: "en", rate: 0.8 }); // Start new speech
+    Speech.stop();
+    Speech.speak(text, { language: "en", rate: 0.8 });
   };
 
-  // Cleanup function to stop speech when navigating away
+  useEffect(() => {
+    const loadLovedWords = async () => {
+      const json = await AsyncStorage.getItem(storageKey);
+      if (json) setLovedIds(JSON.parse(json));
+    };
+    loadLovedWords();
+  }, []);
+
   useEffect(() => {
     return () => {
-      Speech.stop(); // Stop speech immediately when component unmounts
+      Speech.stop();
     };
   }, []);
+
+  const toggleLove = async (id: number) => {
+    const updated = lovedIds.includes(id)
+      ? lovedIds.filter((item) => item !== id)
+      : [...lovedIds, id];
+    setLovedIds(updated);
+    await AsyncStorage.setItem(storageKey, JSON.stringify(updated));
+  };
 
   const styles = StyleSheet.create({
     list: {
@@ -107,23 +119,35 @@ export default function ShowWords({ dataList }: any) {
 
   const renderItem = ({ item }: { item: (typeof dataList)[0] }) => (
     <View style={styles.card}>
-
-      {/* Header with word and speaker */}
+      {/* Header with word, heart, and speaker */}
       <View style={styles.header}>
         <View style={styles.wordSection}>
           <Text style={styles.id}>{item.id}.</Text>
           <Text style={styles.word}>{item.word}</Text>
         </View>
-        <TouchableOpacity onPress={() => handleSpeak(item.word)}>
-          <Ionicons
-            name="volume-high-outline"
-            size={26}
-            color={isDark ? "#fff" : "#000"}
-          />
-        </TouchableOpacity>
+
+        <View style={styles.iconRow}>
+          {/* ❤️ Toggle button */}
+          <TouchableOpacity onPress={() => toggleLove(item.id)} style={{ marginRight: 12 }}>
+            <Ionicons
+              name={lovedIds.includes(item.id) ? "heart" : "heart-outline"}
+              size={24}
+              color={lovedIds.includes(item.id) ? "red" : isDark ? "#aaa" : "#333"}
+            />
+          </TouchableOpacity>
+
+          {/* 🔊 Word speaker */}
+          <TouchableOpacity onPress={() => handleSpeak(item.word)}>
+            <Ionicons
+              name="volume-high-outline"
+              size={26}
+              color={isDark ? "#fff" : "#000"}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
 
-      {/* Meaning section with speaker */}
+      {/* Meaning section */}
       <View style={styles.header}>
         <Text style={styles.label}>📖 Meaning</Text>
         <TouchableOpacity onPress={() => handleSpeak(item.meaning)}>
@@ -136,7 +160,7 @@ export default function ShowWords({ dataList }: any) {
       </View>
       <Text style={styles.text}>{item.meaning}</Text>
 
-      {/* Synonyms section with speaker */}
+      {/* Synonyms section */}
       <View style={styles.header}>
         <Text style={styles.label}>✅ Synonyms</Text>
         <TouchableOpacity onPress={() => handleSpeak(item.synonyms)}>
@@ -155,7 +179,7 @@ export default function ShowWords({ dataList }: any) {
         ))}
       </View>
 
-      {/* Antonyms section with speaker */}
+      {/* Antonyms section */}
       <View style={styles.header}>
         <Text style={styles.label}>✅ Antonyms</Text>
         <TouchableOpacity onPress={() => handleSpeak(item.antonyms)}>

@@ -17,8 +17,8 @@ import brain from "@/assets/images/brain.png";
 import closedBook from "@/assets/images/closed-book.png";
 import slangs from "@/assets/images/slangs.png";
 import beginner from "@/assets/images/beginner.png";
-import intermediate from "@/assets/images/intermediate.png";
 import advanced from "@/assets/images/advanced.png";
+import practice from "@/assets/images/practice.png";
 import { useRouter } from "expo-router";
 
 export default function IdiomsAndPhrases() {
@@ -49,8 +49,9 @@ export default function IdiomsAndPhrases() {
       </Text>
       <View style={styles.threeColumn}>
         <Card title="Beginner" isDark={isDark} />
-        <Card title="Intermediate" isDark={isDark} />
         <Card title="Advanced" isDark={isDark} />
+        <Card title="Practice" isDark={isDark} />
+      
       </View>
     </ScrollView>
   );
@@ -65,7 +66,7 @@ function Card({ title, isDark }: { title: string; isDark: boolean }) {
     Words: closedBook,
     Slangs: slangs,
     Beginner: beginner,
-    Intermediate: intermediate,
+    Practice: practice,
     Advanced: advanced,
   };
 
