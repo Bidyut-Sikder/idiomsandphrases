@@ -8,7 +8,7 @@ node_modules/
 dist/
 web-build/
 expo-env.d.ts
-
+app.json
 # Native
 *.orig.*
 *.jks
@@ -42,6 +42,6 @@ app-example
 
 google-services.json
 idiomsphrases-pushnotification-firebase-adminsdk.json
-app.json
+
 /ios
 /androididiomsphrases-pushnotification-firebase-adminsdk.json
