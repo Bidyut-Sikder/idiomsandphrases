@@ -20,8 +20,11 @@ import beginner from "@/assets/images/beginner.png";
 import advanced from "@/assets/images/advanced.png";
 import practice from "@/assets/images/practice.png";
 import { useRouter } from "expo-router";
+import { useNotification } from "@/hooks/notificationContext";
 
 export default function IdiomsAndPhrases() {
+  const { expoPushToken, notification, error } = useNotification();
+ 
   const { theme, bg } = useTheme();
   const isDark = theme === "dark";
 
@@ -30,6 +33,9 @@ export default function IdiomsAndPhrases() {
       <Text style={[styles.sectionTitle, { color: isDark ? "#fff" : "#000" }]}>
         Idioms and Phrases
       </Text>
+      {/* <Text style={[styles.sectionTitle, { color: isDark ? "#fff" : "#000" }]}>
+        Push Notification Token: {JSON.stringify(notification) || "Not available"}
+      </Text> */}
       <View style={styles.threeColumn}>
         <Card title="Idioms" isDark={isDark} />
         <Card title="Phrases" isDark={isDark} />
@@ -51,7 +57,6 @@ export default function IdiomsAndPhrases() {
         <Card title="Beginner" isDark={isDark} />
         <Card title="Advanced" isDark={isDark} />
         <Card title="Practice" isDark={isDark} />
-      
       </View>
     </ScrollView>
   );

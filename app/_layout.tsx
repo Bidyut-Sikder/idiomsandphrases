@@ -1,5 +1,3 @@
-
-
 import React, { Fragment, useEffect } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
@@ -7,13 +5,27 @@ import { Stack, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { CustomThemeProvider, useTheme } from "@/hooks/theme";
 import { TouchableOpacity, View } from "react-native";
-
+import { useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { NotificationProvider } from "@/hooks/notificationContext";
+
+import * as Notifications from "expo-notifications";
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: true,
+  }),
+});
 
 function LayoutContent() {
   const { theme } = useTheme();
   const router = useRouter();
+ 
 
+
+  
   return (
     <Fragment>
       <StatusBar style={theme === "dark" ? "light" : "dark"} />
@@ -61,9 +73,6 @@ function LayoutContent() {
           }}
         />
         <Stack.Screen name="settings" options={{ title: "Settings" }} />
-
-        {/* <Stack.Screen name="index" options={{ title: "Home" }} /> */}
-        {/* <Stack.Screen name="settings" options={{ title: "Settings" }} /> */}
       </Stack>
     </Fragment>
   );
@@ -85,8 +94,10 @@ export default function RootLayout() {
   }
 
   return (
-    <CustomThemeProvider>
-      <LayoutContent />
-    </CustomThemeProvider>
+    <NotificationProvider>
+      <CustomThemeProvider>
+        <LayoutContent />
+      </CustomThemeProvider>
+    </NotificationProvider>
   );
 }

@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "Idioms & Phrases",
-    "slug": "idiomsandphrases",
+    "slug": "idiomsandphrases",//slug = project name for Expo’s servers.
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    // "scheme": "idiomsandphrases",//Scheme is what lets your app open from a link on others phone.
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -13,25 +13,23 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/icon.png",
+
+        "backgroundColor": "#EA2264"
       },
+      "googleServicesFile": "./google-services.json",
       "package": "com.bidyut_sikder.idiomsandphrases"
     },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
+
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#ECEEDF"
         }
       ],
       [

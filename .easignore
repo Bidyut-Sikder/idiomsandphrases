@@ -40,8 +40,6 @@ app-example
 *.apk
 *.aab
 
-google-services.json
-idiomsphrases-pushnotification-firebase-adminsdk.json
-eas.json
+
 /ios
 /android
